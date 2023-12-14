@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/3d0e27e432.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="icon" href="https://i.pinimg.com/736x/d0/b2/9b/d0b29bc0ecb3559d99595049e3c3356d.jpg" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <span>Eucaliptus</span>
+        </div>
+        <div id="about">
+            <a href="#top">Как вы можете расслабиться?</a>
+            <a href="{% url 'index' %}">Домой</a>
+            <a href="#main">Услуги</a>
+            <a href="#overview">Массажи</a>
+            <a href="products.html">SPA-DAY</a>
+            <a href="#about2">О нас</a>
+            </div>
+    </header>
+
+<div id="price">
+    <h2>SPA-DAY</h2>
+    <span>Это возможность отдохнуть в течение всего дня.
+        В вашем распоряжении: 2 бассейна, финская сауна,
+        хаммам, джакузи, лаунж-зона и спа-ресторан. </span>
+    <pre>
+
+Прейскурант.
+</pre>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить </button></li></a>
+
+    {% for product in products %}
+        <div class="wrapper">
+            <div class="card">
+                <img src="{{ product.image }}"
+                     alt="">
+
+            <div class="content1">
+                <div class="row">
+                    <div class="details">
+                        <span>{{ product.name }}</span>
+                    </div>
+                    <div class="price1">{{ product.price }} ₽</div>
+                </div>
+                <div class="buttons">
+                    <p class="card-text">{{ product.description }}</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+</div>
+
+<fotter id="last">
+    <div>
+    <span class="title">Телефон</span><br>
+    <span class="heading">+79515354255</span>
+    <p>+88635220077</p>
+    </span>
+</div>
+<div>
+    <span class="title">Время работы</span><br>
+    <span class="heading">пн-пт с 11:00 до 22:00</span>
+        <p>Сб-вс с 11:00 до 23:00</p>
+    </span>
+</div>
+<div>
+    <label>
+        <span class="titleorg">Eucalyptus</span>
+    </label>
+</div>
+<div>
+    <span class="title">Адрес</span><br>
+    <span class="heading">ул. Лагранжа, 56, дом 6.</span>
+    </span>
+</div>
+</fotter>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //функция, которая будет принимать параметр id, т.е анимация
+        //к блоку пользователя. offset - отступ
+        function slowScroll(id) {
+            $ ('html', 'body').animate({
+                scrollTop: $(id).offset().top
+                }, 500);
+        }
+        //проскролленое расстояние сверху,
+        //=== необходимы для проверки числа, removeclass - удаляем класс
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+        });
+    </script>
+</body>
+</html>
+

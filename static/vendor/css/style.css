@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #746f6f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Шапка сайта*/
+
+header {
+ width: 100%;
+ padding: 10px 0.5% 0px 0.5%;
+ background: transparent; 
+ float: left;
+ position: fixed;
+}
+
+header #logo {
+    color: #fff;
+    cursor: pointer;
+}
+
+header #logo span {
+    font-size: 1.3em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif serif;
+}
+
+@media (min-width: 701px) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+    
+    #about {
+        float: right;
+        width: 67%;
+    }
+
+}
+
+@media (min-width: 700px) {
+    #logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    #about {
+        float: left;
+        width: 100%;
+    }
+}
+
+#about {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#about > a {color: #fff}
+
+#about > a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+    margin-right: 5%;
+}
+
+/*fixed - стили для шапки, 
+когда мы проскролим, к ней будет добавлен новый стиль*/
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #343434;
+}
+ 
+.fixed #about a {color: #343434}
+.fixed #about a:nover {color: #7c7c7c;}
+
+/*Главный блок на сайте*/
+ #top {
+   width: 100%;
+   height: 100%; 
+   background-image: url(https://www.hedonspa.com/wp-content/uploads/2014/10/Hedon-spa-bathing-area.jpg);
+   background-blend-mode: multiply; /*Возможность накладывать несколько слоев на один блок*/
+   background-color: #2e3a44;
+   background-size: cover;
+   text-align: center;
+   color: #fff;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1000px) and (min-width: 651px) {
+    #top {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 650px) {
+    #top {
+        font-size: 1.5em;
+    }
+}
+
+ #top h1 {
+    padding-top: 20%;
+ }
+
+ #top h3 {
+    color: #ccc;
+ }
+
+
+
+ /*блок "В СПА ЦЕНТРЕ..."*/
+
+ #main {
+    padding: 100px 20%;
+    width: 100%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid rgb(85, 24, 24);
+    color: #ffffff;
+    font-size: 1.1em;
+    background-image: url(https://berrispa.ru/media/inter/2relax.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    
+ }
+
+@media (min-width: 1401px) {
+    #main {
+        padding: 100px 10%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    #main div {
+        width: 48%!important;
+    }
+}
+
+ #main div {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+ }
+
+ .main .intro .img {
+    width: 10%;
+    height: 10%;
+ }
+ #main h2 {font-size: 3em;}
+ #main span {color: #a0a0a0;}
+
+
+
+ /*блок МАССАЖИ*/
+
+ #overview {
+    padding: 100px 20%;
+    width: 100%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid rgb(85, 24, 24);
+    color: #ffffff;
+    font-size: 1.1em;
+    background-image: url(https://idei.club/uploads/posts/2022-10/1666994280_48-idei-club-p-spa-interer-krasivo-50.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+ }
+
+@media (min-width: 1401px) {
+    #overview {
+        padding: 100px 10%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    #overview div {
+        width: 48%!important;
+    }
+}
+
+ #overview div {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+ }
+
+ #overview h2 {font-size: 3em;}
+ #overview span {color: #a0a0a0;}
+ #overview pre {font-size: 1.5em;}
+
+
+
+  /*блок SPA-DAY*/
+
+  #price {
+    padding: 100px 20%;
+    width: 100%;
+      height: 100%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid rgb(85, 24, 24);
+    color: #ffffff;
+    font-size: 1.1em;
+    background-image: url(https://xpresent.ru/filecache/cache/377b931ffaddf0517e74435f66ec386a.jpeg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+ }
+
+@media (min-width: 1401px) {
+    #price {
+        padding: 80px 10%;
+        width: 100%;
+    }
+}
+
+ #price h2 {font-size: 3em;}
+ #price span {color: #a0a0a0;}
+ #price pre {font-size: 1.5em;}
+
+
+   /*блок о НАС*/
+
+   #about2 {
+    padding: 100px 20%;
+    width: 100%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid rgb(85, 24, 24);
+    color: #ffffff;
+    font-size: 1.1em;
+    background-image: url(https://fbmp4.com/wp-content/uploads/2022/03/beauty-salon-uniforms-fbmp4.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+ }
+
+@media (min-width: 1401px) {
+    #about2 {
+        padding: 100px 10%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    #about2 div {
+        width: 48%!important;
+    }
+}
+
+ #about2 div {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+ }
+
+ #about2 h2 {font-size: 3em;}
+ #about2 span {color: #a0a0a0;}
+ #about2 pre {font-size: 1.5em;}
+
+
+ /*FOOTER*/
+ #last {
+    background-color: #272323;
+    border-top: 2px dashed #e4e3e3;
+    width: 100%;
+    float: left;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 1px solid rgb(85, 24, 24);
+    background-blend-mode: multiply;
+    
+}
+
+ #last div {
+    width: 15%;
+    margin-left: 6%;
+    float: left;
+ }
+
+ #last .title {
+    font-weight: lighter;
+    color: #a3a0ad;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+ }
+
+ #last .titleorg {
+    font-size: 2.8em;;
+    border-bottom: 2px solid rgb(17, 11, 11); 
+
+ }
+
+ @media (min-width: 1401px) {
+    #last {
+        padding: 100px 10%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    #last div {
+        width: 48%!important;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    max-width: 1130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -10%;
+    
+}
+.wrapper .card {
+    width: calc(33% - 13px);
+    height: 350px;
+    overflow: hidden;
+    margin: 35px;
+}
+.wrapper .card img {
+    width: 50%;
+    height: 100px;
+    object-fit: cover;
+}
+
